@@ -1,3 +1,5 @@
 numpy 
 torch
 qpsolvers
+proxsuite
+qpsolvers[proxqp]

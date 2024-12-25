@@ -32,6 +32,8 @@ class Net(nn.Module):
     def __init__(self, input_size, output_size):
         super(Net, self).__init__()
 
+
+
         # 第一个隐藏层
         self.fc1 = nn.Linear(input_size, 256)
         self.hidden_layers_1 = nn.ModuleList([nn.Linear(256, 256) for _ in range(4)])
@@ -190,6 +192,7 @@ class MLsqp(object):
         self.h_expand=h
 
         problem = Problem(P, q, G=G,h=h,A=A,b=b)
+
         try:
             solution = solve_problem(problem, solver="proxqp",max_iter=100)
         except ValueError:

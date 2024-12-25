@@ -25,9 +25,6 @@ class Net(Net):
 
         # 输出层
         self.fc_out = nn.Linear(128, output_size)
-
-
-
     def forward(self, x):
         x = swish(self.fc1(x))
         for layer in self.hidden_layers_1:
